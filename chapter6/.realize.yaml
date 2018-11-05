@@ -1,0 +1,22 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+schema:
+- name: chapter6
+  path: cmd/service
+  commands: {
+    run: {
+      status: true
+    }
+  }
+  watcher:
+    extensions:
+    - go
+    paths:
+    - ../../
+    ignore:
+      paths:
+      - .git
+      - .realize
+      - vendor
